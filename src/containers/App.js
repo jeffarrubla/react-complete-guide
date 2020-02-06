@@ -31,13 +31,22 @@ class App extends Component {
     this.setState({persons: persons})
   }
 
-  componentWillMount() {
-    console.log('[App.js] componentWillMount');
+  //componentWillMount() {
+  //  console.log('[App.js] componentWillMount');
+  //}
+
+  componentDidMount() {
+    console.log('[App.js] componentDidMount');
   }
 
-  //componentDidMount() {
-  //  console.log('[App.js] componentDidMount');
-  //}
+  componentDidUpdate(){
+    console.log('[App.js] componentDidMount');    
+  } 
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('[App.js] shouldComponentUpdate');
+    return true;
+  }
 
   nameChangedHandler = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => {
