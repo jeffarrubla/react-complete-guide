@@ -5,7 +5,10 @@ const cockpit = (props) => {
 	useEffect(() => {
 		console.log('[Cockpit.js] useEffect');
 		// Http request
-	});
+		setTimeout(() => {
+			alert('Saved date from cloud');
+		}, 1000)
+	}, []); //only runs the 1st time
 
 
 	const assignedClasses = [];
